@@ -1,6 +1,6 @@
 # seqtools
 
-Sequence efficient utilities.
+Efficient utilities for sequence.
 
 ## Table of Contents <!-- omit in toc -->
 

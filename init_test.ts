@@ -1,7 +1,7 @@
 // Copyright © 2023 Tomoki Miyauchi. All rights reserved. MIT license.
 
 import { init } from "./init.ts";
-import { Sliceable, VariableLength } from "./types.ts";
+import { Sliceable } from "./types.ts";
 import {
   assertEquals,
   assertType,
@@ -12,7 +12,7 @@ import {
 
 describe("init", () => {
   it("should return elements without last", () => {
-    const table: [Sliceable<unknown> & VariableLength, unknown][] = [
+    const table: [Sliceable<unknown>, unknown][] = [
       [[], []],
       ["", ""],
       [[""], []],

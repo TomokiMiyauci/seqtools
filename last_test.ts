@@ -1,7 +1,7 @@
 // Copyright © 2023 Tomoki Miyauchi. All rights reserved. MIT license.
 
 import { last } from "./last.ts";
-import { Indexable, VariableLength } from "./types.ts";
+import { Indexable } from "./types.ts";
 import {
   assertEquals,
   assertType,
@@ -12,7 +12,7 @@ import {
 
 describe("last", () => {
   it("should return last of element", () => {
-    const table: [Indexable<unknown> & VariableLength, unknown][] = [
+    const table: [Indexable<unknown>, unknown][] = [
       [[], undefined],
       ["", undefined],
 

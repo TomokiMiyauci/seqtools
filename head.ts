@@ -19,5 +19,5 @@ export function head<const T>(seq: readonly [T, ...readonly unknown[]]): T;
 export function head<T extends string>(seq: `${T}${string}`): T;
 export function head<T>(seq: Readonly<Indexable<T>>): T | undefined;
 export function head<T>(seq: Readonly<Indexable<T>>): T | undefined {
-  return seq[0];
+  return seq.at(0);
 }

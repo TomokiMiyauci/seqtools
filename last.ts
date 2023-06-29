@@ -1,7 +1,7 @@
 // Copyright © 2023 Tomoki Miyauchi. All rights reserved. MIT license.
 // This module is browser compatible.
 
-import type { Indexable, VariableLength } from "./types.ts";
+import type { Indexable } from "./types.ts";
 
 /** Extract the last element of a sequence.
  *
@@ -17,13 +17,9 @@ import type { Indexable, VariableLength } from "./types.ts";
  */
 export function last<const T>(seq: readonly [...readonly unknown[], T]): T;
 export function last<const T extends string>(seq: `${T}`): LastString<T>;
-export function last<T>(
-  seq: Readonly<Indexable<T> & VariableLength>,
-): T | undefined;
-export function last<T>(
-  seq: Readonly<Indexable<T> & VariableLength>,
-): T | undefined {
-  return seq[seq.length - 1];
+export function last<T>(seq: Readonly<Indexable<T>>): T | undefined;
+export function last<T>(seq: Readonly<Indexable<T>>): T | undefined {
+  return seq.at(-1);
 }
 
 export type LastString<T extends string> = T extends "" ? undefined

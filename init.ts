@@ -1,7 +1,7 @@
 // Copyright © 2023 Tomoki Miyauchi. All rights reserved. MIT license.
 // This module is browser compatible.
 
-import type { Sliceable, VariableLength } from "./types.ts";
+import type { Sliceable } from "./types.ts";
 
 /** Extract the elements before the last of a sequence.
  *
@@ -19,8 +19,8 @@ export function init<const T extends readonly unknown[]>(
   seq: readonly [...T, unknown],
 ): T;
 export function init<const T extends string>(seq: `${T}`): InitChars<T>;
-export function init<T>(seq: Readonly<Sliceable<T> & VariableLength>): T;
-export function init<T>(seq: Readonly<Sliceable<T> & VariableLength>): T {
+export function init<T>(seq: Readonly<Sliceable<T>>): T;
+export function init<T>(seq: Readonly<Sliceable<T>>): T {
   return seq.slice(0, -1);
 }
 

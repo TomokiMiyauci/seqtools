@@ -23,7 +23,7 @@ This project is a sequence version of
 It provides the most efficient solution for sequence.
 
 A sequence is an "index-accessible, sliceable data structure". See
-[Sequence](types.ts#L4) for the specific interface.
+[`Sequence`](types.ts#L4) for the specific interface.
 
 Standard data structures that satisfy this are string and array.
 
@@ -74,8 +74,9 @@ import { tail } from "https://deno.land/x/seqtools/tail.ts";
 import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
 
 assertEquals(tail([1, 2, 3]), [2, 3]);
-assertEquals(tail([1]), []);
-assertEquals(tail(""), "");
+assertEquals(tail("abc"), "bc");
+assertEquals(tail([0]), []);
+assertEquals(tail([]), []);
 ```
 
 ### init
@@ -88,7 +89,8 @@ import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
 
 assertEquals(init([1, 2, 3]), [1, 2]);
 assertEquals(init("abc"), "ab");
-assertEquals(init([1]), []);
+assertEquals(init([0]), []);
+assertEquals(init([]), []);
 ```
 
 ### last

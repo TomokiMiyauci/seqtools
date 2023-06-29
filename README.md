@@ -1,6 +1,6 @@
 # seqtools
 
-Sequence utilities.
+Sequence efficient utilities.
 
 ## Table of Contents <!-- omit in toc -->
 
@@ -22,7 +22,7 @@ This project is a sequence version of
 
 It provides the most efficient solution for sequence.
 
-A sequence is an "index-accessible, sliceable data structure". See
+A sequence is an "indexable, sliceable data structure". See
 [`Sequence`](types.ts#L4) for the specific interface.
 
 Standard data structures that satisfy this are string and array.

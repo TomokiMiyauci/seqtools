@@ -18,7 +18,7 @@ export function tail<const T extends readonly unknown[]>(
   seq: readonly [unknown, ...T],
 ): T;
 export function tail<const T extends string>(seq: `${string}${T}`): T;
-export function tail<T>(seq: Sliceable<T>): T;
-export function tail<T>(seq: Sliceable<T>): T {
+export function tail<T>(seq: Readonly<Sliceable<T>>): T;
+export function tail<T>(seq: Readonly<Sliceable<T>>): T {
   return seq.slice(1);
 }

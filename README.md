@@ -39,7 +39,7 @@ index access and slicing are performance optimal.
 deno.land:
 
 ```ts
-import * as mod from "https://deno.land/x/seqtools/mod.ts";
+import * as mod from "https://deno.land/x/seqtools/[snake_case].ts";
 ```
 
 npm:

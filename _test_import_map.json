@@ -1,6 +1,7 @@
 {
   "imports": {
     "https://deno.land/x/seqtools/": "./",
+    "https://deno.land/x/seqtools/[snake_case].ts": "./head.ts",
     "https://deno.land/std/": "https://deno.land/std@0.190.0/"
   }
 }

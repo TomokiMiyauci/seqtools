@@ -1,5 +1,16 @@
 # seqtools
 
+[![deno land](http://img.shields.io/badge/available%20on-deno.land/x-lightgrey.svg?logo=deno)](https://deno.land/x/seqtools)
+[![deno doc](https://doc.deno.land/badge.svg)](https://deno.land/x/seqtools?doc)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/TomokiMiyauci/seqtools)](https://github.com/TomokiMiyauci/seqtools/releases)
+[![codecov](https://codecov.io/github/TomokiMiyauci/seqtools/branch/main/graph/badge.svg)](https://codecov.io/gh/TomokiMiyauci/seqtools)
+[![License](https://img.shields.io/github/license/TomokiMiyauci/seqtools)](LICENSE)
+
+[![test](https://github.com/TomokiMiyauci/seqtools/actions/workflows/test.yaml/badge.svg)](https://github.com/TomokiMiyauci/seqtools/actions/workflows/test.yaml)
+[![NPM](https://nodei.co/npm/seqtools.png?mini=true)](https://nodei.co/npm/seqtools/)
+[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](https://github.com/RichardLitt/standard-readme)
+[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
+
 Efficient utilities for sequence.
 
 ## Table of Contents <!-- omit in toc -->

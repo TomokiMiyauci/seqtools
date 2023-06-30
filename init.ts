@@ -27,6 +27,6 @@ export function init<T>(seq: Readonly<Sliceable<T>>): T {
 
 export type InitString<T extends string> = T extends "" ? "" : DropLastChar<T>;
 
-export type DropLastChar<T extends string, Acc extends string = ""> = T extends
+type DropLastChar<T extends string, Acc extends string = ""> = T extends
   `${infer U}${infer V}` ? V extends "" ? Acc : DropLastChar<V, `${Acc}${U}`>
   : never;

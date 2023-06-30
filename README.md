@@ -22,6 +22,7 @@ Efficient utilities for sequence.
   - [tail](#tail)
   - [init](#init)
   - [last](#last)
+  - [headTail](#headtail)
 - [API](#api)
 - [Contributing](#contributing)
 - [License](#license)
@@ -116,6 +117,22 @@ assertEquals(last([1, 2, 3]), 3);
 assertEquals(last("abc"), "c");
 assertEquals(last([]), undefined);
 ```
+
+### headTail
+
+Split the sequence into head and tail.
+
+```ts
+import { headTail } from "https://deno.land/x/seqtools/head_tail.ts";
+import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+
+assertEquals(headTail([1, 2, 3]), [1, [2, 3]]);
+assertEquals(headTail("abc"), ["a", "bc"]);
+assertEquals(headTail([]), [undefined, []]);
+```
+
+Conceptually, it is similar to Array destructuring, but done in a theoretically
+best-performing way.
 
 ## API
 

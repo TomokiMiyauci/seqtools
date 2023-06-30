@@ -1,7 +1,7 @@
 // Copyright © 2023 Tomoki Miyauchi. All rights reserved. MIT license.
 // This module is browser compatible.
 
-export interface Sequence<T> extends Indexable<T>, Sliceable<T> {}
+export interface Sequence<T, U = T> extends Indexable<T>, Sliceable<U> {}
 
 export interface Indexable<T> {
   /** Returns the item located at the specified index. */

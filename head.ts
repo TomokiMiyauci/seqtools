@@ -16,7 +16,7 @@ import type { Indexable } from "./types.ts";
  * ```
  */
 export function head<const T>(seq: readonly [T, ...readonly unknown[]]): T;
-export function head<T extends string>(seq: `${T}${string}`): T;
+export function head<const T extends string>(seq: `${T}${string}`): T;
 export function head<T>(seq: Readonly<Indexable<T>>): T | undefined;
 export function head<T>(seq: Readonly<Indexable<T>>): T | undefined {
   return seq.at(0);

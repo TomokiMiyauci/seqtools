@@ -10,8 +10,9 @@ import type { Sliceable } from "./types.ts";
  * import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
  *
  * assertEquals(tail([1, 2, 3]), [2, 3]);
- * assertEquals(tail([1]), []);
- * assertEquals(tail(""), "");
+ * assertEquals(tail("abc"), "bc");
+ * assertEquals(tail([0]), []);
+ * assertEquals(tail([]), []);
  * ```
  */
 export function tail<const T extends readonly unknown[]>(

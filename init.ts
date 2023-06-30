@@ -12,19 +12,20 @@ import type { Sliceable } from "./types.ts";
  *
  * assertEquals(init([1, 2, 3]), [1, 2]);
  * assertEquals(init("abc"), "ab");
- * assertEquals(init([1]), []);
+ * assertEquals(init([0]), []);
+ * assertEquals(init([]), []);
  * ```
  */
 export function init<const T extends readonly unknown[]>(
   seq: readonly [...T, unknown],
 ): T;
-export function init<const T extends string>(seq: `${T}`): InitChars<T>;
+export function init<const T extends string>(seq: `${T}`): InitString<T>;
 export function init<T>(seq: Readonly<Sliceable<T>>): T;
 export function init<T>(seq: Readonly<Sliceable<T>>): T {
   return seq.slice(0, -1);
 }
 
-export type InitChars<T extends string> = T extends "" ? "" : DropLastChar<T>;
+export type InitString<T extends string> = T extends "" ? "" : DropLastChar<T>;
 
 export type DropLastChar<T extends string, Acc extends string = ""> = T extends
   `${infer U}${infer V}` ? V extends "" ? Acc : DropLastChar<V, `${Acc}${U}`>

@@ -70,7 +70,7 @@ export const makeOptions = (version: string): BuildOptions => {
     compilerOptions: { lib: ["ESNext"] },
     outDir: "./npm",
     package: {
-      name: "seqtools",
+      name: "@miyauci/seqtools",
       version,
       description: "Efficient utilities for sequence",
       keywords: [
@@ -93,6 +93,7 @@ export const makeOptions = (version: string): BuildOptions => {
       },
       sideEffects: false,
       type: "module",
+      publishConfig: { access: "public" },
       typesVersions,
       main: undefined,
       module: undefined,

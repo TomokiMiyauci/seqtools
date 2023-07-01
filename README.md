@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/github/license/TomokiMiyauci/seqtools)](LICENSE)
 
 [![test](https://github.com/TomokiMiyauci/seqtools/actions/workflows/test.yaml/badge.svg)](https://github.com/TomokiMiyauci/seqtools/actions/workflows/test.yaml)
-[![NPM](https://nodei.co/npm/seqtools.png?mini=true)](https://nodei.co/npm/seqtools/)
+[![NPM](https://nodei.co/npm/@miyauci/seqtools.png?mini=true)](https://nodei.co/npm/@miyauci/seqtools/)
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](https://github.com/RichardLitt/standard-readme)
 [![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 
@@ -58,7 +58,7 @@ import * as mod from "https://deno.land/x/seqtools/[snake_case].ts";
 npm:
 
 ```bash
-npm i seqtools
+npm i @miyauci/seqtools
 ```
 
 ## Usage

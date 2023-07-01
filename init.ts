@@ -25,6 +25,7 @@ export function init<T>(seq: Readonly<Sliceable<T>>): T {
   return seq.slice(0, -1);
 }
 
+/** Infer the string without last character. */
 export type InitString<T extends string> = T extends "" ? "" : DropLastChar<T>;
 
 type DropLastChar<T extends string, Acc extends string = ""> = T extends

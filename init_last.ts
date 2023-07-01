@@ -2,7 +2,7 @@
 // This module is browser compatible.
 
 import type { Sequence } from "./types.ts";
-import type { LastString } from "./last.ts";
+import type { LastChar } from "./last.ts";
 import type { InitString } from "./init.ts";
 
 /** Split the sequence into init and last.
@@ -22,7 +22,7 @@ export function initLast<const T extends readonly unknown[], const U>(
 ): [init: T, last: U];
 export function initLast<const T extends string>(
   string: `${T}`,
-): [init: InitString<T>, last: LastString<T>];
+): [init: InitString<T>, last: LastChar<T>];
 export function initLast<T, U = T>(
   seq: Readonly<Sequence<T, U>>,
 ): [init: U, last: T | undefined];

@@ -16,15 +16,15 @@ import type { Indexable } from "./types.ts";
  * ```
  */
 export function last<const T>(array: readonly [...readonly unknown[], T]): T;
-export function last<const T extends string>(string: `${T}`): LastString<T>;
+export function last<const T extends string>(string: `${T}`): LastChar<T>;
 export function last<T>(seq: Readonly<Indexable<T>>): T | undefined;
 export function last<T>(seq: Readonly<Indexable<T>>): T | undefined {
   return seq.at(-1);
 }
 
-export type LastString<T extends string> = T extends "" ? undefined
-  : LastChar<T>;
-
+/** Infer the last character of string.
+ * If empty string, infer `undefined`.
+ */
 export type LastChar<T extends string> = T extends `${infer F}${infer Rest}`
   ? Rest extends "" ? F : LastChar<Rest>
-  : never;
+  : undefined;

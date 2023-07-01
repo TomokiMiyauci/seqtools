@@ -23,6 +23,7 @@ Efficient utilities for sequence.
   - [init](#init)
   - [last](#last)
   - [headTail](#headtail)
+  - [initLast](#initlast)
 - [API](#api)
 - [Contributing](#contributing)
 - [License](#license)
@@ -131,8 +132,18 @@ assertEquals(headTail("abc"), ["a", "bc"]);
 assertEquals(headTail([]), [undefined, []]);
 ```
 
-Conceptually, it is similar to Array destructuring, but done in a theoretically
-best-performing way.
+### initLast
+
+Split the sequence into init and last.
+
+```ts
+import { initLast } from "https://deno.land/x/seqtools/init_last.ts";
+import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+
+assertEquals(initLast([1, 2, 3]), [[1, 2], 3]);
+assertEquals(initLast("abc"), ["ab", "c"]);
+assertEquals(initLast([]), [[], undefined]);
+```
 
 ## API
 

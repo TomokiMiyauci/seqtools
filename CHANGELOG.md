@@ -1,3 +1,10 @@
+# [1.0.0-beta.3](https://github.com/TomokiMiyauci/seqtools/compare/1.0.0-beta.2...1.0.0-beta.3) (2023-07-01)
+
+
+### Features
+
+* rename type alias ([eb3f50e](https://github.com/TomokiMiyauci/seqtools/commit/eb3f50e487290624a9e390355d2a3f47175a8f3a))
+
 # [1.0.0-beta.2](https://github.com/TomokiMiyauci/seqtools/compare/1.0.0-beta.1...1.0.0-beta.2) (2023-07-01)
 
 

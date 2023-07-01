@@ -15,8 +15,8 @@ import type { Indexable } from "./types.ts";
  * assertEquals(last([]), undefined);
  * ```
  */
-export function last<const T>(seq: readonly [...readonly unknown[], T]): T;
-export function last<const T extends string>(seq: `${T}`): LastString<T>;
+export function last<const T>(array: readonly [...readonly unknown[], T]): T;
+export function last<const T extends string>(string: `${T}`): LastString<T>;
 export function last<T>(seq: Readonly<Indexable<T>>): T | undefined;
 export function last<T>(seq: Readonly<Indexable<T>>): T | undefined {
   return seq.at(-1);

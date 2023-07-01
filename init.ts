@@ -17,9 +17,9 @@ import type { Sliceable } from "./types.ts";
  * ```
  */
 export function init<const T extends readonly unknown[]>(
-  seq: readonly [...T, unknown],
+  array: readonly [...T, unknown],
 ): T;
-export function init<const T extends string>(seq: `${T}`): InitString<T>;
+export function init<const T extends string>(string: `${T}`): InitString<T>;
 export function init<T>(seq: Readonly<Sliceable<T>>): T;
 export function init<T>(seq: Readonly<Sliceable<T>>): T {
   return seq.slice(0, -1);

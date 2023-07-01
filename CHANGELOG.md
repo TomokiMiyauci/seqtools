@@ -1,3 +1,12 @@
+# [1.0.0-beta.2](https://github.com/TomokiMiyauci/seqtools/compare/1.0.0-beta.1...1.0.0-beta.2) (2023-07-01)
+
+
+### Features
+
+* **head_tail:** add spliting head and tail ([4aacd32](https://github.com/TomokiMiyauci/seqtools/commit/4aacd32af6d58747462aa0331b845d51c0130486))
+* **init_last:** add spliting init and last like spread operation ([3409514](https://github.com/TomokiMiyauci/seqtools/commit/34095145a266c2d2ce41ef94a371eeff5eeb2611))
+* **types:** add generics for slice ([26384ec](https://github.com/TomokiMiyauci/seqtools/commit/26384ec1839aeb8468732092878311a8beaf5836))
+
 # 1.0.0-beta.1 (2023-06-30)
 
 

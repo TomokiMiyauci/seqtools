@@ -1,5 +1,16 @@
 # seqtools
 
+[![deno land](http://img.shields.io/badge/available%20on-deno.land/x-lightgrey.svg?logo=deno)](https://deno.land/x/seqtools)
+[![deno doc](https://doc.deno.land/badge.svg)](https://deno.land/x/seqtools?doc)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/TomokiMiyauci/seqtools)](https://github.com/TomokiMiyauci/seqtools/releases)
+[![codecov](https://codecov.io/github/TomokiMiyauci/seqtools/branch/main/graph/badge.svg)](https://codecov.io/gh/TomokiMiyauci/seqtools)
+[![License](https://img.shields.io/github/license/TomokiMiyauci/seqtools)](LICENSE)
+
+[![test](https://github.com/TomokiMiyauci/seqtools/actions/workflows/test.yaml/badge.svg)](https://github.com/TomokiMiyauci/seqtools/actions/workflows/test.yaml)
+[![NPM](https://nodei.co/npm/@miyauci/seqtools.png?mini=true)](https://nodei.co/npm/@miyauci/seqtools/)
+[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](https://github.com/RichardLitt/standard-readme)
+[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
+
 Efficient utilities for sequence.
 
 ## Table of Contents <!-- omit in toc -->
@@ -11,6 +22,8 @@ Efficient utilities for sequence.
   - [tail](#tail)
   - [init](#init)
   - [last](#last)
+  - [headTail](#headtail)
+  - [initLast](#initlast)
 - [API](#api)
 - [Contributing](#contributing)
 - [License](#license)
@@ -39,13 +52,13 @@ index access and slicing are performance optimal.
 deno.land:
 
 ```ts
-import * as mod from "https://deno.land/x/seqtools/mod.ts";
+import * as mod from "https://deno.land/x/seqtools/[snake_case].ts";
 ```
 
 npm:
 
 ```bash
-npm i seqtools
+npm i @miyauci/seqtools
 ```
 
 ## Usage
@@ -104,6 +117,32 @@ import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
 assertEquals(last([1, 2, 3]), 3);
 assertEquals(last("abc"), "c");
 assertEquals(last([]), undefined);
+```
+
+### headTail
+
+Split the sequence into head and tail.
+
+```ts
+import { headTail } from "https://deno.land/x/seqtools/head_tail.ts";
+import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+
+assertEquals(headTail([1, 2, 3]), [1, [2, 3]]);
+assertEquals(headTail("abc"), ["a", "bc"]);
+assertEquals(headTail([]), [undefined, []]);
+```
+
+### initLast
+
+Split the sequence into init and last.
+
+```ts
+import { initLast } from "https://deno.land/x/seqtools/init_last.ts";
+import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+
+assertEquals(initLast([1, 2, 3]), [[1, 2], 3]);
+assertEquals(initLast("abc"), ["ab", "c"]);
+assertEquals(initLast([]), [[], undefined]);
 ```
 
 ## API
